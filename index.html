@@ -20,7 +20,7 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div id="menu-bar">
-                <img onclick="myFunction()" src="/img/hamburger.png" alt="hamburger" id="toggle-bar">
+                <img onclick="toggleMenu()" src="/img/hamburger.png" alt="hamburger" id="toggle-bar">
             </div>
         </div>
         
@@ -683,25 +683,25 @@
     <script>
         let navLinks = document.getElementById('nav-links');
         let toggleBar = document.getElementById('toggle-bar');
-        let text = false;
+        let open = false;
 
-    function myFunction() {
+    function toggleMenu() {
         navLinks.classList.toggle('down')
-         text = !text;
-       if (text == false){
-            toggleBar.src = "img/hamburger.png";
-       }else{
+         open = !open;
+       if (open){
             toggleBar.src = "img/close-menu.png";
+        }else{
+           toggleBar.src = "img/hamburger.png";
        }
     }
 
     navLinks.addEventListener('click', ()=>{
         navLinks.classList.remove('down');
-          text = !text;
-       if (text == false){
-            toggleBar.src = "img/hamburger.png";
-       }else{
-            toggleBar.src = "img/close-menu.png";
+          open = !open;
+       if (open){
+           toggleBar.src = "img/close-menu.png";
+        }else{
+           toggleBar.src = "img/hamburger.png";
        }
     })
     </script>
