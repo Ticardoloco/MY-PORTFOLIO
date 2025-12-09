@@ -694,6 +694,16 @@
             toggleBar.src = "img/close-menu.png";
        }
     }
+
+    navLinks.addEventListener('click', ()=>{
+        navLinks.classList.remove('down');
+          text = !text;
+       if (text == false){
+            toggleBar.src = "img/hamburger.png";
+       }else{
+            toggleBar.src = "img/close-menu.png";
+       }
+    })
     </script>
 
 </body>
